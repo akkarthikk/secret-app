@@ -30,6 +30,7 @@ app.post("/check", (req, res) => {
   } else {
  console.log(`${req.body["password"]}`);
     res.status(403).send("Access denied. You are not authorized.");
+    res.sendFile(__dirname + "/public/index.html");
 
   }
 });
