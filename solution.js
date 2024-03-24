@@ -14,6 +14,7 @@ function passwordCheck(req, res, next) {
   const password = req.body["password"];
   if (password === "1") {
     userIsAuthorised = true;
+    console.log(`${req.body["password"]} success`);
   }
   next();
 }
